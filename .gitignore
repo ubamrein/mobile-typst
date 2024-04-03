@@ -1,0 +1,8 @@
+/target
+**/generated
+**/headers
+**/*.xcframework
+/Mobiletypst
+/packages
+/swift
+**/*.pdf

@@ -1,0 +1,22 @@
+namespace mobiletypst {
+    sequence<TaggedString> highlight_source(string source);
+};
+interface TypstWorld {
+    constructor(string root);
+    [Throws=CompilationError]
+    bytes compile_pdf();
+};
+
+dictionary TaggedString {
+ string tag;
+ u64 offset;
+ u64 length;
+ string? errors;
+};
+
+
+
+[Error]
+interface CompilationError {
+  CompilationError(string inner);
+};
